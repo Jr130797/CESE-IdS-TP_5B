@@ -29,18 +29,33 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+/** \brief Estructura de Alumnos
+ */ 
 typedef struct alumno_s {
-    char apellidos[30];
-    char nombres[30];
-    char documento[11];
+    char apellidos[30]; //!< Instancia de apellidos.  
+    char nombres[30];   //!< Instancia de nombres.  
+    char documento[11]; //!< Instancia de documentos DNI.    
 } const * alumno_t;
 
 /*=====[Definitions of public global variables]==============================*/
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+
+/** \brief Función SerializarAlumno
+ * Creación de cadena de caráteres con datos de las estructuras
+ * @param cadena Puntero donde de se guardan los datos de las estructuras
+ * @param espacio Entero sin signo tipo size_t
+ * @param alumno Variable de la estructura alumno_s
+ * * @return Devolución de TRUE o FALSE
+*/
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+/** \brief Función SerializarAlumno
+* @param cadena Puntero donde se guardan los datos de las estructuras
+* @param espacio Entero sin signo del tipo size_t
+* @return Devolución de TRUE o FALSE
+*/
 bool SerializarAlumnos(char * cadena, size_t espacio);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/

@@ -25,23 +25,31 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
+/** \brief Estructura de Esteban Volentini
+*/
 static const struct alumno_s ESTEBAN_VOLENTINI = {
     .apellidos = "VOLENTINI",
     .nombres = "Esteban Daniel",
     .documento = "23.517.968",
 };
 
+/** \brief Estructura de Ivan Vargas Marza
+*/
 static const struct alumno_s IVAN_VARGAS_MARZA = {
     .apellidos = "VARGAS MARZA",
     .nombres = "Ivan",
     .documento = "9.394.693",
 };
 
+/** \brief Array de punteros a las constantes de las estructuras
+*/
 const alumno_t ALUMNOS[] = {
     &ESTEBAN_VOLENTINI,
     &IVAN_VARGAS_MARZA,
 };
 
+/** \brief Cálculo de la cantidad de alumnos 
+*/
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
